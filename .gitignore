@@ -1,0 +1,17 @@
+# 작업용 폴더 (깃허브에 올리지 않음)
+work/
+
+# 사진 심기·패치용 스크립트 (배포 불필요)
+embed.py
+patch_fold.py
+patch_default.py
+verify_fold.py
+
+# 배포용 사진 폴더는 photos/ 이며 반드시 깃허브에 포함(무시하지 않음)
+# 아래 장소/ 는 중복 원본이라 배포 불필요 → 제외
+장소/
+
+# OS·에디터 부산물
+Thumbs.db
+desktop.ini
+.DS_Store
