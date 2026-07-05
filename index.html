@@ -30,22 +30,23 @@ button{font:inherit}
 .mchip b{font-weight:600;color:var(--text)}
 .mchip .dot{width:6px;height:6px;border-radius:50%;background:var(--m5)}
 .segwrap{position:sticky;top:0;z-index:30;background:var(--bg);padding:10px 0 12px;margin-bottom:12px}
-.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--g100);border:1px solid var(--border);border-radius:var(--r-md);padding:3px;box-shadow:var(--sh-sm)}
-.seg button{border:none;background:transparent;border-radius:9px;padding:9px 2px 8px;cursor:pointer;color:var(--text-3);transition:color .15s}
-.seg button .w{display:block;font-size:11px;font-weight:600;letter-spacing:.01em}
-.seg button .l{display:block;font-size:13px;font-weight:600;margin-top:1px;color:inherit}
-.seg button.on{background:var(--surface);color:var(--text);box-shadow:var(--sh-sm)}
-.seg button.on .w{color:var(--t)}
-.seg button:focus-visible{outline:2px solid var(--p600);outline-offset:-2px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:transparent;border:none;border-radius:0;padding:0;box-shadow:none}
+.seg button{border:none;background:var(--t-soft);border-radius:12px;padding:11px 2px 10px;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease}
+.seg button .w{display:block;font-size:11px;font-weight:600;letter-spacing:.01em;color:var(--t)}
+.seg button .l{display:block;font-size:13px;font-weight:700;margin-top:2px;color:var(--t-deep)}
+.seg button.on{background:var(--t);box-shadow:0 4px 12px var(--t-sh);transform:translateY(-2px)}
+.seg button.on .w{color:rgba(255,255,255,.82)}
+.seg button.on .l{color:#fff}
+.seg button:focus-visible{outline:2px solid var(--t);outline-offset:2px}
 .day{--t:var(--p600);--t-soft:var(--p50);--t-deep:var(--p700);--grad:linear-gradient(135deg,var(--p700),var(--p600));scroll-margin-top:78px}
 #day1{--t:#2E5E8C;--t-soft:#e9f0f7;--t-deep:#234E70;--grad:linear-gradient(135deg,#1d3f5e 0%,#2E5E8C 55%,#4A7FB5 100%)}
 #day2{--t:#0E9F6E;--t-soft:#e6f6f0;--t-deep:#0b7d57;--grad:linear-gradient(135deg,#086148 0%,#0E9F6E 55%,#31C48D 100%)}
 #day3{--t:#E8590C;--t-soft:#fdeee3;--t-deep:#c74a08;--grad:linear-gradient(135deg,#a63d06 0%,#E8590C 55%,#F1863C 100%)}
 #day4{--t:#7C5CBF;--t-soft:#f1ecfa;--t-deep:#63459f;--grad:linear-gradient(135deg,#4e3585 0%,#7C5CBF 55%,#9678D3 100%)}
-.seg button[data-day="1"]{--t:#2E5E8C}
-.seg button[data-day="2"]{--t:#0E9F6E}
-.seg button[data-day="3"]{--t:#E8590C}
-.seg button[data-day="4"]{--t:#7C5CBF}
+.seg button[data-day="1"]{--t:#2E5E8C;--t-soft:#e9f0f7;--t-deep:#234E70;--t-sh:rgba(46,94,140,.34)}
+.seg button[data-day="2"]{--t:#0E9F6E;--t-soft:#e6f6f0;--t-deep:#0b7d57;--t-sh:rgba(14,159,110,.34)}
+.seg button[data-day="3"]{--t:#E8590C;--t-soft:#fdeee3;--t-deep:#c74a08;--t-sh:rgba(232,89,12,.34)}
+.seg button[data-day="4"]{--t:#7C5CBF;--t-soft:#f1ecfa;--t-deep:#63459f;--t-sh:rgba(124,92,191,.34)}
 .day{display:none}
 .day.on{display:block;animation:fade .2s ease}
 @keyframes fade{from{opacity:0}to{opacity:1}}
@@ -156,7 +157,6 @@ button{font:inherit}
     <h1>서울 가족여행</h1>
     <div class="metachips">
       <span class="mchip dday" id="dday"></span>
-      <span class="mchip">5인 · <b>스타리아</b></span>
       <span class="mchip"><span class="dot"></span>숙소 <b>하람하우스</b> · 5호선 신정역 도보 5분</span>
       <span class="mchip">지하철 <b>1,550원</b>/인·회</span>
     </div>
@@ -164,7 +164,7 @@ button{font:inherit}
   <div class="segwrap">
   <nav class="seg" role="tablist">
     <button class="on" data-day="1" role="tab"><span class="w">7/28 화</span><span class="l">이동·정착</span></button>
-    <button data-day="2" role="tab"><span class="w">7/29 수</span><span class="l">성수·잠실</span></button>
+    <button data-day="2" role="tab"><span class="w">7/29 수</span><span class="l">코엑스·잠실</span></button>
     <button data-day="3" role="tab"><span class="w">7/30 목</span><span class="l">망원·용산</span></button>
     <button data-day="4" role="tab"><span class="w">7/31 금</span><span class="l">가평·귀가</span></button>
   </nav>
@@ -238,7 +238,7 @@ button{font:inherit}
     </div>
   </section>
   <section class="day" id="day2">
-    <div class="banner"><div class="bd">DAY 2 · 7월 29일 수요일</div><h2>성수 + 잠실</h2><div class="bm">지하철 · 동쪽 라인</div></div>
+    <div class="banner"><div class="bd">DAY 2 · 7월 29일 수요일</div><h2>코엑스 + 잠실</h2><div class="bm">지하철 · 강남·잠실 라인</div></div>
     <div class="tl">
       <div class="item mark">
         <span class="node">宿</span>
@@ -246,25 +246,46 @@ button{font:inherit}
       </div>
       <div class="leg" style="--lc:var(--m5)">
         <span class="lnode"></span>
-        <div class="legbody"><span class="legmode">지하철</span> <span class="hop"><span class="ln" style="background:var(--m5)">5</span><b>신정</b></span> 하남·마천 방면 → <b>왕십리</b> 환승 → <span class="hop"><span class="ln" style="background:var(--m2)">2</span><b>성수</b></span> 1정거장 · <b>3번 출구</b> (카페거리 방면) <span class="ldur">약 50분</span></div>
+        <div class="legbody"><span class="legmode">지하철</span> <span class="hop"><span class="ln" style="background:var(--m5)">5</span><b>신정</b></span> 여의도 방면 → <b>여의도</b> 환승 → <span class="hop"><span class="ln" style="background:#A38F3D">9</span><b>급행</b></span> <b>봉은사</b> · <b>7번 출구</b> 코엑스몰 직결 <span class="ldur">약 50분</span></div>
       </div>
-      <div class="item" style="--nc:var(--m5)">
-        <span class="node">5</span>
-        <div class="time"><b>10:30</b>경 도착 · 팝업·카페·점심</div>
+      <div class="item" style="--nc:#A38F3D">
+        <span class="node">9</span>
+        <div class="time"><b>10:30</b>경 도착 · 관람 1–1.5시간</div>
         <div class="card">
-          <img class="photo" src="photos/seongsu_popup_street.jpeg" alt="성수동 팝업 + 카페거리" loading="lazy" onerror="this.style.display='none'">
-          <div class="chead"><h3>성수동 팝업 + 카페거리</h3>
-            <div class="badges"><span class="bdg">팝업은 매주 바뀜 — 출발 직전 확인</span></div></div>
+          <img class="photo" src="photos/starfield_library_coex.jpg" alt="코엑스 별마당도서관" loading="lazy" onerror="this.style.display='none'">
+          <div class="chead"><h3>코엑스 별마당도서관</h3>
+            <div class="badges"><span class="bdg">입장 무료</span><span class="bdg">10:30–22:00 · 연중무휴</span></div></div>
           <div class="cbody">
-            <div class="row"><div class="rk">코스</div><div class="rv">팝업 2–3곳 → 카페거리 → 성수에서 점심</div></div>
-            <div class="row"><div class="rk">예산</div><div class="rv">점심 1인 <span class="price">12,000–18,000원</span> · 카페 <span class="price">6,000–8,000원</span></div></div>
-            <div class="memo"><div class="lab"><label>가고 싶은 팝업·카페</label><span class="save"></span></div><textarea data-key="d2s1" placeholder="브랜드, 팝업 이름"></textarea></div>
+            <div class="row"><div class="rk">코스</div><div class="rv">13m 대형 서가 관람·사진 → 코엑스몰 구경</div></div>
+            <div class="row"><div class="rk">팁</div><div class="rv">개관 직후가 한적 · 냉방 강해 한여름에 시원<small>책 구매는 몰 안 영풍문고에서</small></div></div>
+            <div class="memo"><div class="lab"><label>구경하고 싶은 곳</label><span class="save"></span></div><textarea data-key="d2s1" placeholder="코엑스몰에서 갈 곳"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="leg" style="--lc:var(--g400)">
+        <span class="lnode"></span>
+        <div class="legbody"><span class="legmode">도보</span> 같은 건물 — 별마당도서관에서 몰 식당가로 <span class="ldur">몇 분</span></div>
+      </div>
+      <div class="item" style="--nc:#A38F3D">
+        <span class="node">食</span>
+        <div class="time"><b>12:00</b> 점심 · 약 1시간</div>
+        <div class="card">
+          <img class="photo" src="photos/coex_food_court.jpg" alt="코엑스몰 식당가" loading="lazy" onerror="this.style.display='none'">
+          <div class="chead"><h3>코엑스몰 식당가</h3>
+            <div class="badges"><span class="bdg">지하 1층 · 별마당 근처</span></div></div>
+          <div class="cbody">
+            <div class="row"><div class="rk">추천</div><div class="rv"><b>더 플레이스</b> 파스타·피자 · <b>돈가스 하우스</b> 빠르고 편안 · <b>아웃백</b> 스테이크<small>모두 지하 1층 — 5인 각자 취향대로 고르기 좋음</small></div></div>
+            <div class="row"><div class="rk">한식</div><div class="rv">도심공항타워 푸드스트리트 순댓국, 또는 옆 <b>현대백화점 무역센터점</b> 식당가<small>어르신 정갈한 한 끼로 좋음</small></div></div>
+            <div class="row"><div class="rk">붐빔</div><div class="rv">평일 <b>12–13시</b> 직장인 점심으로 혼잡 → <b>11:30 전</b>이나 <b>13:30 후</b> 권장</div></div>
+            <div class="row"><div class="rk">팁</div><div class="rv">가게 앞 무인 테이블링으로 대기 걸고 몰 구경 · <b>스타필드 앱</b> 실내지도<small>몰이 넓어 길 찾기 어려움</small></div></div>
+            <div class="row"><div class="rk">예산</div><div class="rv">1인 <span class="price">12,000–20,000원</span> (아웃백은 더)</div></div>
+            <div class="memo"><div class="lab"><label>점심 후보</label><span class="save"></span></div><textarea data-key="d2lunch" placeholder="먹고 싶은 메뉴·식당"></textarea></div>
           </div>
         </div>
       </div>
       <div class="leg" style="--lc:var(--m2)">
         <span class="lnode"></span>
-        <div class="legbody"><span class="legmode">지하철</span> <span class="hop"><span class="ln" style="background:var(--m2)">2</span><b>성수</b></span> 잠실 방면 5정거장 → <b>잠실</b> · 개찰구 나와 <b>1·2번 출구 방면</b> 지하통로로 몰 직결 (아쿠아리움은 몰 지하 1층) <span class="ldur">약 12분</span></div>
+        <div class="legbody"><span class="legmode">지하철</span> <span class="hop"><span class="ln" style="background:var(--m2)">2</span><b>삼성</b></span> 잠실 방면 3정거장 → <b>잠실</b> · 개찰구 나와 <b>1·2번 출구 방면</b> 지하통로로 몰 직결 (아쿠아리움은 몰 지하 1층) <span class="ldur">약 8분</span></div>
       </div>
       <div class="item" style="--nc:var(--m2)">
         <span class="node">2</span>
@@ -418,7 +439,7 @@ button{font:inherit}
       <label class="check"><input type="checkbox" data-key="c1"><span>호스트에게 <b>스타리아 주차</b> 문의 — 길이 5.25m · 폭 2m 명시</span></label>
       <label class="check"><input type="checkbox" data-key="c2"><span><b>창주랜드</b> 전화 — 초6 동반 확인 + 7/30 저녁 5인 예약 + 바베큐 사전 주문</span></label>
       <label class="check"><input type="checkbox" data-key="c3"><span><b>아쿠아리움</b> 티켓 예매 — 서울스카이 가면 콤보로</span></label>
-      <label class="check"><input type="checkbox" data-key="c4"><span>성수동 <b>7월 말 팝업 목록</b> 확인 — 출발 1주 전</span></label>
+      <label class="check"><input type="checkbox" data-key="c4"><span><b>코엑스 별마당도서관</b> — 무료·예약 불필요, 10:30 개관 참고</span></label>
       <label class="check"><input type="checkbox" data-key="c5"><span><b>쁘띠프랑스</b> 할인 티켓 확인 — 클룩</span></label>
       <div class="memo" style="margin-top:14px"><div class="lab"><label>전체 메모</label><span class="save"></span></div><textarea data-key="global" placeholder="여행 전체 관련 메모"></textarea></div>
     </div>
@@ -498,7 +519,7 @@ button{font:inherit}
       <label class="check"><input type="checkbox" data-key="c1"><span>호스트에게 <b>스타리아 주차</b> 문의 — 길이 5.25m · 폭 2m 명시</span></label>
       <label class="check"><input type="checkbox" data-key="c2"><span><b>창주랜드</b> 전화 — 초6 동반 확인 + 7/30 저녁 5인 예약 + 바베큐 사전 주문</span></label>
       <label class="check"><input type="checkbox" data-key="c3"><span><b>아쿠아리움</b> 티켓 예매 — 서울스카이 가면 콤보로</span></label>
-      <label class="check"><input type="checkbox" data-key="c4"><span>성수동 <b>7월 말 팝업 목록</b> 확인 — 출발 1주 전</span></label>
+      <label class="check"><input type="checkbox" data-key="c4"><span><b>코엑스 별마당도서관</b> — 무료·예약 불필요, 10:30 개관 참고</span></label>
       <label class="check"><input type="checkbox" data-key="c5"><span><b>쁘띠프랑스</b> 할인 티켓 확인 — 클룩</span></label>
       <div class="memo" style="margin-top:14px"><div class="lab"><label>전체 메모</label><span class="save"></span></div><textarea data-key="global" placeholder="여행 전체 관련 메모"></textarea></div>
     </div>
@@ -534,7 +555,8 @@ button{font:inherit}
   const PLACES={
     d1s2:{url:'https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%AA%A9%EB%8F%99%EC%A0%90'},
     d1s3:{url:'https://map.naver.com/p/search/%EC%9D%B4%EB%A7%88%ED%8A%B8%20%EB%AA%A9%EB%8F%99%EC%A0%90'},
-    d2s1:{url:'https://map.naver.com/p/search/%EC%84%B1%EC%88%98%EB%8F%99%20%EC%B9%B4%ED%8E%98%EA%B1%B0%EB%A6%AC'},
+    d2s1:{url:'https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4%20%EB%B3%84%EB%A7%88%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80'},
+    d2lunch:{floor:'https://m.starfield.co.kr/coexmall/tenant/floorInfo'},
     d2s2:{url:'https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C%20%EC%95%84%EC%BF%A0%EC%95%84%EB%A6%AC%EC%9B%80'},
     d2s3:{url:'https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C%EB%AA%B0'},
     d3s1:{url:'https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%EC%8B%9C%EC%9E%A5'},
@@ -602,6 +624,7 @@ button{font:inherit}
         const ac=document.createElement('div'); ac.className='acts';
         let h='';
         if(p.url) h+='<a class="abtn" target="_blank" rel="noopener" href="'+p.url+'">사진·정보 보기</a>';
+        if(p.floor) h+='<a class="abtn" target="_blank" rel="noopener" href="'+p.floor+'">층별안내</a>';
         if(p.tel) h+='<a class="abtn" href="tel:'+p.tel.replace(/-/g,'')+'">전화 걸기 '+p.tel+'</a>';
         ac.innerHTML=h; chead.appendChild(ac);
       }
@@ -611,7 +634,7 @@ button{font:inherit}
   function fmt(n){return n?Number(n).toLocaleString('ko-KR'):''}
   function renderExp(){
     const box=document.getElementById('expsum'); if(!box)return;
-    const names={1:'1일차 · 이동·정착',2:'2일차 · 성수·잠실',3:'3일차 · 망원·용산',4:'4일차 · 가평·귀가'};
+    const names={1:'1일차 · 이동·정착',2:'2일차 · 코엑스·잠실',3:'3일차 · 망원·용산',4:'4일차 · 가평·귀가'};
     const cols={1:'#2E5E8C',2:'#0E9F6E',3:'#E8590C',4:'#7C5CBF'};
     let total=0,h='';
     for(let d=1;d<=4;d++){
