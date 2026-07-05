@@ -623,7 +623,7 @@ button{font:inherit}
       if(p&&chead&&!chead.querySelector('.acts')){
         const ac=document.createElement('div'); ac.className='acts';
         let h='';
-        if(p.url) h+='<a class="abtn" target="_blank" rel="noopener" href="'+p.url+'">사진·정보 보기</a>';
+        if(p.url) h+='<a class="abtn" target="_blank" rel="noopener" href="'+p.url+'">위치 보기</a>';
         if(p.floor) h+='<a class="abtn" target="_blank" rel="noopener" href="'+p.floor+'">층별안내</a>';
         if(p.tel) h+='<a class="abtn" href="tel:'+p.tel.replace(/-/g,'')+'">전화 걸기 '+p.tel+'</a>';
         ac.innerHTML=h; chead.appendChild(ac);
