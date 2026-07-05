@@ -139,12 +139,25 @@ button{font:inherit}
 .acts{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
 .abtn{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--text-2);text-decoration:none;transition:border-color .15s,color .15s}
 .abtn:hover{border-color:var(--t);color:var(--t-deep)}
-.exp{display:flex;align-items:center;gap:10px;margin-top:12px;background:var(--g50);border:1px solid var(--border);border-radius:var(--r-sm);padding:8px 12px}
-.exp label{font-size:12px;font-weight:600;color:var(--text-2);flex-shrink:0}
-.exp .cur{font-size:13px;font-weight:600;color:var(--text-3)}
-.exp input{flex:1;min-width:0;border:none;background:transparent;font:inherit;font-size:14px;font-weight:600;color:var(--text);text-align:right;font-variant-numeric:tabular-nums}
-.exp input::placeholder{color:var(--text-4);font-weight:400}
-.exp input:focus{outline:none}
+.exp{margin-top:12px;background:var(--g50);border:1px solid var(--border);border-radius:var(--r-sm);padding:8px 12px 10px}
+.exp .exphd{font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:2px}
+.exprows{display:flex;flex-direction:column}
+.exprow{display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:1px dashed var(--g100)}
+.exprow:last-child{border-bottom:none}
+.exprow input{border:none;background:transparent;font:inherit;color:var(--text)}
+.exprow input:focus{outline:none}
+.exprow input.el{flex:1;min-width:0;font-size:13.5px;font-weight:500}
+.exprow input.ea{width:86px;text-align:right;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.exprow input::placeholder{color:var(--text-4);font-weight:400}
+.exprow .cur{font-size:12.5px;color:var(--text-3);flex-shrink:0}
+.exctrl{flex-shrink:0;display:flex;gap:4px;align-items:center;min-width:16px;justify-content:flex-end}
+.exdel{border:none;background:none;color:var(--text-4);cursor:pointer;font-size:15px;line-height:1;padding:2px 3px}
+.exdel:hover{color:var(--warn)}
+.exconf{border:none;background:none;color:var(--warn);font-size:12px;font-weight:700;cursor:pointer;padding:2px 4px}
+.excancel{border:none;background:none;color:var(--text-4);font-size:12px;font-weight:600;cursor:pointer;padding:2px 4px}
+.expsub{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);margin-top:8px;padding-top:8px}
+.expsub .k{font-size:12.5px;color:var(--text-3)}
+.expsub .v{font-size:14px;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
 .sumrow{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--g100);font-size:14px}
 .sumrow:last-of-type{border-bottom:none}
 .sumrow .sk{color:var(--text-2);font-weight:500}
@@ -279,8 +292,11 @@ button{font:inherit}
           <div class="chead"><h3>코엑스 별마당도서관</h3>
             <div class="badges"><span class="bdg">입장 무료</span><span class="bdg">10:30–22:00 · 연중무휴</span></div></div>
           <div class="cbody">
-            <div class="row"><div class="rk">코스</div><div class="rv">13m 대형 서가 관람·사진 → 코엑스몰 구경</div></div>
-            <div class="row"><div class="rk">팁</div><div class="rv">개관 직후가 한적 · 냉방 강해 한여름에 시원<small>책 구매는 몰 안 영풍문고에서</small></div></div>
+            <div class="row"><div class="rk">코스</div><div class="rv">13m 대형 서가 3곳(약 5만 권) 관람·사진 → 코엑스몰 구경<small>지하 1층 센트럴플라자 · 복층(약 850평) 열린 도서관</small></div></div>
+            <div class="row"><div class="rk">볼거리</div><div class="rv">해외잡지 600여 종 특화코너 · 유명인의 서재 · 외국원서 · E-Book(아이패드) 코너</div></div>
+            <div class="row"><div class="rk">포토</div><div class="rv">에스컬레이터·2층 난간·중앙 홀 전경이 인생샷 명당<small>낮엔 자연광, 밤엔 조명으로 느낌 다름 · 시즌엔 대형 조형물</small></div></div>
+            <div class="row"><div class="rk">프로그램</div><div class="rv">중앙 무대에서 작가 토크·북콘서트·명사 강연 수시<small>공연 중엔 좌석 만석 · 일정은 스타필드 앱/별마당 페이지에서 확인</small></div></div>
+            <div class="row"><div class="rk">팁</div><div class="rv">개관 직후가 한적 · 냉방 강해 한여름에 시원 · 음료 반입 OK(열린 도서관)<small>대출·구매는 안 됨 — 책 구매는 몰 안 영풍문고에서</small></div></div>
             <div class="memo"><div class="lab"><label>구경하고 싶은 곳</label><span class="save"></span></div><textarea data-key="d2s1" placeholder="코엑스몰에서 갈 곳"></textarea></div>
           </div>
         </div>
@@ -536,7 +552,7 @@ button{font:inherit}
   const PLACES={
     d1s2:{url:'https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%AA%A9%EB%8F%99%EC%A0%90',floor:'https://m.ehyundai.com/mobile/branch/DP/branch.do?branchCd=B00142000&amp;branchType=10&amp;menuType=floorList'},
     d1s3:{url:'https://map.naver.com/p/search/%EC%9D%B4%EB%A7%88%ED%8A%B8%20%EB%AA%A9%EB%8F%99%EC%A0%90'},
-    d2s1:{url:'https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4%20%EB%B3%84%EB%A7%88%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80'},
+    d2s1:{url:'https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4%20%EB%B3%84%EB%A7%88%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80',floor:'https://m.starfield.co.kr/coexmall/tenant/floorInfo'},
     d2lunch:{floor:'https://m.starfield.co.kr/coexmall/tenant/floorInfo'},
     d2s2:{url:'https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C%20%EC%95%84%EC%BF%A0%EC%95%84%EB%A6%AC%EC%9B%80',floor:'https://aquarium.lotteworld.com/facilities/floor-info/list'},
     d2s3:{url:'https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C%EB%AA%B0',floor:'https://www.lwt.co.kr/ko/about/floor.do'},
@@ -595,8 +611,8 @@ button{font:inherit}
       }
       const memo=item.querySelector('.memo');
       if(memo&&!item.querySelector('.exp')){
-        const ex=document.createElement('div'); ex.className='exp';
-        ex.innerHTML='<label>지출</label><input type="text" inputmode="numeric" data-exp="'+key+'" placeholder="여기서 쓴 금액"><span class="cur">원</span>';
+        const ex=document.createElement('div'); ex.className='exp'; ex.dataset.key=key;
+        ex.innerHTML='<div class="exphd">지출</div><div class="exprows"></div><div class="expsub"><span class="k">이곳 소계</span><span class="v">0원</span></div>';
         memo.parentNode.insertBefore(ex,memo);
       }
       const p=PLACES[key];
@@ -613,6 +629,63 @@ button{font:inherit}
   }
 
   function fmt(n){return n?Number(n).toLocaleString('ko-KR'):''}
+  function expDigits(s){return (s||'').replace(/[^0-9]/g,'').slice(0,9);}
+  function expUpdateSub(rowsBox){
+    let s=0; rowsBox.querySelectorAll('.exprow').forEach(r=>{ const d=expDigits(r._ea.value); if(d) s+=parseInt(d,10); });
+    const ex=rowsBox.closest('.exp'); const v=ex&&ex.querySelector('.expsub .v'); if(v) v.textContent=(s?fmt(s):'0')+'원';
+    return s;
+  }
+  function expSync(rowsBox,key){
+    const arr=[]; rowsBox.querySelectorAll('.exprow').forEach(r=>{ const d=expDigits(r._ea.value); if(d) arr.push({label:r._el.value.trim(),amount:parseInt(d,10)}); });
+    state.exp[key]=arr; expUpdateSub(rowsBox); renderExp(); save();
+  }
+  function expEnsureTrailing(rowsBox,key){
+    const rows=rowsBox.querySelectorAll('.exprow'); const last=rows[rows.length-1];
+    const hasC=last&&(last._el.value.trim()!==''||expDigits(last._ea.value)!=='');
+    if(!last||hasC) rowsBox.appendChild(expRow(rowsBox,key,null));
+  }
+  function expRow(rowsBox,key,entry){
+    const row=document.createElement('div'); row.className='exprow';
+    const el=document.createElement('input'); el.type='text'; el.className='el'; el.placeholder='항목';
+    const ea=document.createElement('input'); ea.type='text'; ea.className='ea'; ea.inputMode='numeric'; ea.placeholder='금액';
+    const cur=document.createElement('span'); cur.className='cur'; cur.textContent='원';
+    const ctrl=document.createElement('span'); ctrl.className='exctrl';
+    if(entry){ el.value=entry.label||''; if(entry.amount) ea.value=fmt(entry.amount); }
+    row.append(el,ea,cur,ctrl); row._el=el; row._ea=ea; row._confirm=false;
+    function hasC(){ return el.value.trim()!==''||expDigits(ea.value)!==''; }
+    function setCtrl(){
+      ctrl.innerHTML='';
+      if(row._confirm){
+        const d=document.createElement('button'); d.type='button'; d.className='exconf'; d.textContent='삭제';
+        d.addEventListener('click',()=>{ rowsBox.removeChild(row); expEnsureTrailing(rowsBox,key); expSync(rowsBox,key); });
+        const c=document.createElement('button'); c.type='button'; c.className='excancel'; c.textContent='취소';
+        c.addEventListener('click',()=>{ row._confirm=false; setCtrl(); });
+        ctrl.append(d,c);
+      } else if(hasC()){
+        const x=document.createElement('button'); x.type='button'; x.className='exdel'; x.setAttribute('aria-label','삭제'); x.textContent='×';
+        x.addEventListener('click',()=>{ row._confirm=true; setCtrl(); });
+        ctrl.appendChild(x);
+      }
+    }
+    function onInput(){
+      const d=expDigits(ea.value); ea.value=d?fmt(parseInt(d,10)):'';
+      if(row._confirm) row._confirm=false;
+      setCtrl();
+      const rows=rowsBox.querySelectorAll('.exprow');
+      if(rows[rows.length-1]===row && hasC()) rowsBox.appendChild(expRow(rowsBox,key,null));
+      expSync(rowsBox,key);
+    }
+    el.addEventListener('input',onInput); ea.addEventListener('input',onInput);
+    setCtrl();
+    return row;
+  }
+  function expRenderRows(ex){
+    const key=ex.dataset.key; const rowsBox=ex.querySelector('.exprows'); rowsBox.innerHTML='';
+    const arr=Array.isArray(state.exp[key])?state.exp[key]:[];
+    arr.forEach(e=> rowsBox.appendChild(expRow(rowsBox,key,e)));
+    rowsBox.appendChild(expRow(rowsBox,key,null));
+    expUpdateSub(rowsBox);
+  }
   function renderExp(){
     const box=document.getElementById('expsum'); if(!box)return;
     const names={1:'1일차 · 이동·정착',2:'2일차 · 코엑스·잠실',3:'3일차 · 망원·용산',4:'4일차 · 가평·귀가'};
@@ -620,7 +693,7 @@ button{font:inherit}
     let total=0,h='';
     for(let d=1;d<=4;d++){
       let s=0;
-      Object.keys(state.exp).forEach(k=>{ if(k.startsWith('d'+d)) s+=state.exp[k]||0; });
+      Object.keys(state.exp).forEach(k=>{ if(k.startsWith('d'+d)){ const a=state.exp[k]; if(Array.isArray(a)) a.forEach(e=>{ s+=e.amount||0; }); else s+=a||0; } });
       total+=s;
       h+='<div class="sumrow"><span class="sk"><i style="background:'+cols[d]+'"></i>'+names[d]+'</span><span class="sv">'+(s?fmt(s)+'원':'—')+'</span></div>';
     }
@@ -662,9 +735,7 @@ button{font:inherit}
     document.querySelectorAll('input[type=checkbox][data-key]').forEach(cb=>{
       cb.checked=!!state.checks[cb.dataset.key];
     });
-    document.querySelectorAll('input[data-exp]').forEach(inp=>{
-      if(state.exp[inp.dataset.exp]) inp.value=fmt(state.exp[inp.dataset.exp]);
-    });
+    document.querySelectorAll('.exp').forEach(ex=>{ expRenderRows(ex); });
     document.querySelectorAll('input[data-done]').forEach(cb=>{
       const on=!!state.done[cb.dataset.done];
       cb.checked=on;
@@ -692,6 +763,7 @@ button{font:inherit}
       if(r&&r.value){
         const loaded=JSON.parse(r.value);
         state=Object.assign({memos:{},checks:{},exp:{},done:{},pack:null},loaded);
+        Object.keys(state.exp).forEach(k=>{ const v=state.exp[k]; if(typeof v==='number') state.exp[k]=v>0?[{label:'',amount:v}]:[]; else if(!Array.isArray(v)) state.exp[k]=[]; });
       }
     }catch(e){}
     applyState();
@@ -703,14 +775,6 @@ button{font:inherit}
     });
     document.querySelectorAll('input[type=checkbox][data-key]').forEach(cb=>{
       cb.addEventListener('change',()=>{ state.checks[cb.dataset.key]=cb.checked; count(); save(); });
-    });
-    document.querySelectorAll('input[data-exp]').forEach(inp=>{
-      inp.addEventListener('input',()=>{
-        const raw=inp.value.replace(/[^0-9]/g,'').slice(0,9);
-        state.exp[inp.dataset.exp]=raw?parseInt(raw,10):0;
-        inp.value=fmt(state.exp[inp.dataset.exp]);
-        renderExp(); save();
-      });
     });
     document.querySelectorAll('input[data-done]').forEach(cb=>{
       cb.addEventListener('change',()=>{
