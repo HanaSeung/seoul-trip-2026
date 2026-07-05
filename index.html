@@ -80,6 +80,17 @@ button{font:inherit}
 .rv b{color:var(--text);font-weight:600}
 .rv small{display:block;font-size:12.5px;color:var(--text-3);margin-top:3px;line-height:1.5}
 .price{display:inline-block;font-variant-numeric:tabular-nums;font-weight:600;color:var(--t-deep);background:var(--t-soft);border-radius:6px;padding:1px 7px;margin:1px 1px}
+.menu{margin:2px 0 2px}
+.mgrp{font-size:11.5px;font-weight:700;color:var(--t-deep);letter-spacing:.02em;margin:11px 0 2px;text-transform:none}
+.mgrp:first-child{margin-top:2px}
+.mrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:5px 0;border-bottom:1px dashed var(--g100)}
+.mrow:last-child{border-bottom:none}
+.mn{font-size:13.5px;color:var(--text-2)}
+.mn b{color:var(--text);font-weight:600}
+.mn small{display:block;font-size:11.5px;color:var(--text-3);margin-top:1px;line-height:1.45}
+.mp{font-size:13px;font-weight:700;color:var(--t-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
+.mloc{display:inline-block;font-size:11px;font-weight:600;color:var(--t-deep);background:var(--t-soft);border-radius:5px;padding:1px 6px;margin-left:7px;text-decoration:none;white-space:nowrap;vertical-align:middle}
+.mloc:hover{filter:brightness(.95)}
 .memo{margin-top:12px}
 .memo .lab{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .memo label{font-size:12px;font-weight:600;color:var(--text-2)}
@@ -348,8 +359,19 @@ button{font:inherit}
           <div class="chead"><h3>망원시장 + 망리단길</h3>
             <div class="badges"><span class="bdg">시장 09:00–21:00</span><span class="bdg">현금·계좌이체 준비</span></div></div>
           <div class="cbody">
-            <div class="row"><div class="rk">먹거리</div><div class="rv"><span class="price">고로케 1,500–2,500</span><span class="price">컵 닭강정 4,000–5,000</span><span class="price">기름떡볶이 3,000–4,000</span><span class="price">칼국수 5,000–7,000원</span><small>점심은 시장 먹거리로 해결하는 게 정석</small></div></div>
-            <div class="row"><div class="rk">식후</div><div class="rv">망리단길 카페·소품샵 → 덥지 않으면 망원한강공원 (도보 15분)</div></div>
+            <div class="row"><div class="rk">먹거리</div><div class="rv"><span class="price">고로케·꽈배기 1,000~2,000</span><span class="price">컵 닭강정 4,000~5,000</span><span class="price">떡볶이·순대 3,000~5,000</span><span class="price">칼국수 5,000~7,000원</span><small>점심은 시장 먹거리로 해결하는 게 정석 · 다 사도 5인 2만 원대 · 아케이드라 비와도 OK</small></div></div>
+            <div class="row"><div class="rk">명물</div><div class="rv">
+              <div class="menu">
+                <div class="mrow"><span class="mn"><b>망원고로케</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%EC%88%98%EC%A0%9C%EA%B3%A0%EB%A1%9C%EC%BC%80">위치</a><small>고로케·꽈배기·팥찹쌀도넛 — 시장 안쪽 끝, 방송 단골</small></span><span class="mp">필수</span></div>
+                <div class="mrow"><span class="mn"><b>큐스·교동 닭강정</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%EC%8B%9C%EC%9E%A5%20%EB%8B%AD%EA%B0%95%EC%A0%95">위치</a><small>컵 닭강정·과일·새우강정</small></span><span class="mp">인기</span></div>
+                <div class="mrow"><span class="mn"><b>바삭마차</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%20%EB%B0%94%EC%82%AD%EB%A7%88%EC%B0%A8">위치</a><small>수제 돈까스 · 토치로 굽는 아이스크림(아이 픽)</small></span></div>
+                <div class="mrow"><span class="mn"><b>훈훈호떡</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%ED%9B%88%ED%9B%88%ED%98%B8%EB%96%A1">위치</a><small>씨앗호떡 · 치즈닝호떡</small></span></div>
+                <div class="mrow"><span class="mn"><b>망원떡갈비</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%EB%96%A1%EA%B0%88%EB%B9%84">위치</a><small>떡갈비 — 주말·저녁은 예약주문 권장</small></span></div>
+                <div class="mrow"><span class="mn"><b>손만두집</b><a class="mloc" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%EC%8B%9C%EC%9E%A5%20%EC%86%90%EB%A7%8C%EB%91%90">위치</a><small>김치만두 · 고기만두</small></span></div>
+              </div></div></div>
+            <div class="row"><div class="rk">망리단길</div><div class="rv">시장 옆 골목 — 감성 카페·소품샵·베이커리. 시장에서 간식 → 망리단길 카페에서 커피·디저트 코스가 편함<small>골목 좁고 2층·계단 카페 많음 · 유모차보다 도보 추천</small></div></div>
+            <div class="row"><div class="rk">피크닉</div><div class="rv">덥지 않으면 먹거리 포장 → <b>망원한강공원</b>에서 피크닉 (도보 15~20분)<small>여름 한낮은 그늘이 적음 · 물·모자 챙기기</small><div class="acts" style="margin-top:7px"><a class="abtn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90">한강공원 위치</a></div></div></div>
+            <div class="row"><div class="rk">팁</div><div class="rv">현금·계좌이체 준비(카드 안 되는 노점 있음) · 온누리상품권 사용처 많음 · 평일 낮은 비교적 한산</div></div>
             <div class="memo"><div class="lab"><label>먹을 것 리스트</label><span class="save"></span></div><textarea data-key="d3s1" placeholder="줄 서서라도 먹을 것"></textarea></div>
           </div>
         </div>
@@ -366,8 +388,28 @@ button{font:inherit}
           <div class="chead"><h3>창주랜드 · 기찻길 옆 바베큐</h3>
             <div class="badges"><span class="bdg warn">예약 + 사전주문 필수</span><span class="bdg warn">초6 동반 가능 전화 확인</span><span class="bdg">17:00–23:00 · 일 휴무</span></div></div>
           <div class="cbody">
-            <div class="row"><div class="rk">주문</div><div class="rv">군통바베큐 플래터(2–3인) <span class="price">43,000원</span> — 5인이면 <b>2개 + 파스타 추가</b><small>골뱅이·짬뽕 파스타 인기 · 후식 설탕토마토 · ☎ 02-3785-2114 · 바베큐 1시간 전 사전 주문</small></div></div>
-            <div class="row"><div class="rk">식후</div><div class="rv">'나의 아저씨' 촬영지 땡땡거리 산책</div></div>
+            <div class="row"><div class="rk">추천</div><div class="rv">5인이면 <b>군통바베큐 플래터 2개 + 파스타 1–2개</b>가 적당<small>☎ 02-3785-2114 · 바베큐는 1시간 전 전화로 사전 주문 · 라스트오더 22:00</small></div></div>
+            <div class="row"><div class="rk">메뉴</div><div class="rv">
+              <div class="menu">
+                <div class="mgrp">바베큐</div>
+                <div class="mrow"><span class="mn"><b>군통바베큐 플래터</b> (2–3인)<small>12시간 숙성 삼겹살+돼지갈비 · 군고구마통 참나무 훈연 · 대표메뉴</small></span><span class="mp">48,000원</span></div>
+                <div class="mrow"><span class="mn">고기 추가 (300g)<small>삼겹살 또는 돼지갈비 택1</small></span><span class="mp">24,000원</span></div>
+                <div class="mgrp">파스타 · 피자</div>
+                <div class="mrow"><span class="mn">짬뽕파스타 <b>인기</b></span><span class="mp">29,000원</span></div>
+                <div class="mrow"><span class="mn">로제파스타</span><span class="mp">22,000원</span></div>
+                <div class="mrow"><span class="mn">골뱅이파스타</span><span class="mp">19,000원</span></div>
+                <div class="mrow"><span class="mn">콤비네이션피자</span><span class="mp">18,000원</span></div>
+                <div class="mrow"><span class="mn">치즈피자</span><span class="mp">18,000원</span></div>
+                <div class="mgrp">안주 · 사이드</div>
+                <div class="mrow"><span class="mn">치즈플래터</span><span class="mp">38,000원</span></div>
+                <div class="mrow"><span class="mn">메론프로슈토</span><span class="mp">29,000원</span></div>
+                <div class="mrow"><span class="mn">브리치즈 구이<small>블루베리·견과류·메이플시럽 토핑 · 와인 안주</small></span><span class="mp">22,000원</span></div>
+                <div class="mrow"><span class="mn">콘치즈</span><span class="mp">15,000원</span></div>
+                <div class="mrow"><span class="mn">노가리</span><span class="mp">15,000원</span></div>
+                <div class="mrow"><span class="mn">설탕토마토<small>후식 추천</small></span><span class="mp">9,000원</span></div>
+              </div>
+              <small>다이닝코드 기준(2025.09) · 가격 변동 가능</small></div></div>
+            <div class="row"><div class="rk">식후</div><div class="rv">'나의 아저씨' 촬영지 <b>땡땡거리(백빈건널목)</b> 산책 — 용산역 한강대교 방향 도보 10분<div class="acts" style="margin-top:7px"><a class="abtn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%B0%B1%EB%B9%88%EA%B1%B4%EB%84%90%EB%AA%A9">위치 보기</a></div></div></div>
             <div class="memo"><div class="lab"><label>메모</label><span class="save"></span></div><textarea data-key="d3s2" placeholder="예약 시간, 주문 내역"></textarea></div>
           </div>
         </div>
@@ -553,7 +595,7 @@ button{font:inherit}
   let state={memos:{},checks:{},exp:{},done:{},pack:null};
   let saveTimer=null;
   const PLACES={
-    d1s2:{url:'https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%AA%A9%EB%8F%99%EC%A0%90'},
+    d1s2:{url:'https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%AA%A9%EB%8F%99%EC%A0%90',floor:'https://m.ehyundai.com/mobile/branch/DP/branch.do?branchCd=B00142000&amp;branchType=10&amp;menuType=floorList'},
     d1s3:{url:'https://map.naver.com/p/search/%EC%9D%B4%EB%A7%88%ED%8A%B8%20%EB%AA%A9%EB%8F%99%EC%A0%90'},
     d2s1:{url:'https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4%20%EB%B3%84%EB%A7%88%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80'},
     d2lunch:{floor:'https://m.starfield.co.kr/coexmall/tenant/floorInfo'},
